@@ -3,33 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Corrida de Carros</title>
+    <title>Car Racing</title>
     <link rel="stylesheet" href="css/index.css">
     <script type="text/javascript" src="js/index.js"></script>
 </head>
 <body>
     <div class="track">
-        <div class="car" id="car1"></div>
-        <div class="car" id="car2"></div>
-        <div class="car" id="car3"></div>
-        <div class="car" id="car4"></div>
-        <div class="car" id="car5"></div>
+        <div class="car" id="car1" style="background-color: rgb(126, 179, 231);"></div>
+        <div class="car" id="car2" style="background-color: #938;"></div>
+        <div class="car" id="car3" style="background-color: #821;"></div>
+        <div class="car" id="car4" style="background-color: #591;"></div>
+        <div class="car" id="car5" style="background-color: #315;"></div>
     </div>
     <div id="bet">
-        <label for="amount">Valor da aposta (mínimo R$5): </label>
-        <input type="number" id="amount" min="5" value="5">
+        <label for="amount">Bet amount (minimum R$5): </label>
+        <input type="number" id="amount" min="5" value="5" style="margin: 10px 0px 10px 0px;">
         <br>
-        <label for="pilot">Escolha o piloto: </label>
-        <select id="pilot">
-            <option value="1">Piloto 1</option>
-            <option value="2">Piloto 2</option>
-            <option value="3">Piloto 3</option>
-            <option value="4">Piloto 4</option>
-            <option value="5">Piloto 5</option>
+        <label for="pilot">Choose the racing driver: </label>
+        <select id="pilot" style="margin: 10px 0px 10px 0px;">
+            <option value="1">Light blue car</option>
+            <option value="2">Purple car</option>
+            <option value="3">Red car</option>
+            <option value="4">Green car</option>
+            <option value="5">Dark blue car</option>
         </select>
         <br>
-        <button onclick="startRace()">Apostar e Correr</button>
+        <button onclick="startRace()">Bet and run</button>
     </div>
-    <div id="result"></div>
+    <div id="result" style="margin-left: 375px;"></div>
+    <div id="saldoDisplay"></div>
 </body>
 </html>

@@ -1,7 +1,18 @@
+var saldo = 100;
+var numApostas = 0;
+
 function startRace() {
     var carPositions = [0, 0, 0, 0, 0];
     var raceInterval = setInterval(moveCars, 50);
     var winner = null;
+    
+
+    function updateSaldoDisplay() {
+        var saldoDisplay = document.getElementById('saldoDisplay');
+        saldoDisplay.textContent = 'Saldo: R$' + saldo + ' | Apostas: ' + numApostas;
+    }
+
+    numApostas++;
 
     function moveCars() {
         for (var i = 0; i < carPositions.length; i++) {
@@ -21,9 +32,15 @@ function startRace() {
         var selectedPilot = parseInt(document.getElementById('pilot').value);
         var resultDiv = document.getElementById('result');
         if (selectedPilot === winner) {
-            resultDiv.textContent = 'Parabéns! Você ganhou R$' + (betAmount * 2);
+            saldo += betAmount * 2;
+            resultDiv.textContent = 'Congratulations! You win R$' + (betAmount * 2);
         } else {
-            resultDiv.textContent = 'Você perdeu a aposta.';
+            saldo -= betAmount;
+            resultDiv.textContent = 'You lost the bet.';
         }
+        updateSaldoDisplay();
     }
+
+    updateSaldoDisplay();
+    
 }

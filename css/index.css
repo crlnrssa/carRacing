@@ -2,17 +2,31 @@
     position: relative;
     width: 50px;
     height: 30px;
-    background-color: blue;
     margin-bottom: 10px;
+    border-radius: 15px;
 }
 
 .track {
-    border: 1px solid black;
-    width: 500px;
+    border: 5px solid black;
+    border-radius: 5px;
+    width: 550px;
     height: 200px;
     padding: 20px;
+    margin-left: auto;
+    margin-right: auto; 
+    background-color: #e0e0e0;
 }
 
 #result {
     margin-top: 20px;
+}
+
+#saldoDisplay {
+    margin-top: 10px;
+    margin-left: 375px;
+}
+
+#bet {
+    margin: 50px 290px 0px 325px;
+    padding: 0px 50px 10px 50px;
 }
